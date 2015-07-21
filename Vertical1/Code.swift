@@ -12,9 +12,12 @@ public class MyView: UIView {
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        backgroundColor = UIColor.blueColor()
+        
         let image = UIImage(named: "a", inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
+        imageView.backgroundColor = UIColor.redColor()
         
         self.addSubview(imageView)
         
